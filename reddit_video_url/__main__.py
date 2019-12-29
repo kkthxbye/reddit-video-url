@@ -1,8 +1,8 @@
+import sys
 from argparse import ArgumentParser
 from json import loads
 from typing import Dict, List, Optional, Union
 from urllib.request import Request, urlopen
-import sys
 
 
 def extract_url(post: Union[List, Dict]) -> Optional[Union[Dict, List, str]]:
@@ -35,5 +35,3 @@ if __name__ == '__main__':
     sys.stdout.write(extract_url(loads(
         load_post_json(args.url, args.user_agent)
     )))
-
-    # print(extract_url(loads(load_post_json(args.url, args.user_agent))))
