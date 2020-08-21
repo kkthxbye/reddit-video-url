@@ -6,7 +6,7 @@ from urllib.request import Request, urlopen
 
 
 def extract_url(post: Union[List, Dict]) -> Optional[Union[Dict, List, str]]:
-    if isinstance(post, List):
+    if isinstance(post, list):
         post = dict(enumerate(post))
 
     return next((x for x in (
